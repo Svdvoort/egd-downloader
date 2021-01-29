@@ -26,14 +26,20 @@ metadata_folder = os.path.join(OUTPUT_DIRECTORY, "METADATA")
 os.makedirs(metadata_folder, exist_ok=True)
 shutil.chown(metadata_folder, user=folder_owner_uid, group=folder_group_uid)
 
+license_file = os.path.join(OUTPUT_DIRECTORY, "DATA_LICENSE.pdf")
+
 
 with xnat.connect(XNAT_URL, user=args.username, password=args.password) as session:
     project = session.projects[XNAT_PROJECT]
     print("Downloading metadata")
     for i_file in project.resources["PROJECT_DATA"].files.values():
-        i_output_file = os.path.join(metadata_folder, i_file.id)
-        i_file.download(i_output_file, verbose=False)
-        shutil.chown(i_output_file, user=folder_owner_uid, group=folder_group_uid)
+        if "license" not in i_file.id:
+            i_output_file = os.path.join(metadata_folder, i_file.id)
+            i_file.download(i_output_file, verbose=False)
+            shutil.chown(i_output_file, user=folder_owner_uid, group=folder_group_uid)
+        else:
+            i_file.download(license_file, verbose=False)
+            shutil.chown(license_file, user=folder_owner_uid, group=folder_group_uid)
 
     print("Downloading subjects")
     subjects = project.subjects.values()
