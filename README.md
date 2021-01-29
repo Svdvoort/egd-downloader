@@ -18,7 +18,7 @@ Installation instructions can be found on [the docker website](https://docs.dock
 Once `Docker` has been installed, run the following command to install the data locally:
 
 ```bash
-docker run  --mount type=bind,source=/PATH/TO/YOUR/OUTPUT/FOLDER,target=/output --rm svdvoort/egd-downloader:1.0 --user <YOUR_USERNAME> --password <YOUR_PASSWORD>
+docker run  --mount type=bind,source=/PATH/TO/YOUR/OUTPUT/FOLDER,target=/output --rm svdvoort/egd-downloader:1.1 --user <YOUR_USERNAME> --password <YOUR_PASSWORD>
 ```
 
 In this command three items have to be set by the user:
