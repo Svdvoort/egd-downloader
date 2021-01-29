@@ -26,3 +26,7 @@ In this command three items have to be set by the user:
 * `/PATH/TO/YOUR/OUTPUT/FOLDER` needs to be replaced by your desired output folder (folder should exist)
 * `<YOUR_USERNAME>` needs to be replaced by the user's username for the BMIA XNAT.
 * `<YOUR_PASSWORD>` needs to be replaced by the user's password for the BMIA XNAT.
+
+# Notes
+
+Some scans might have a poor image quality or errors due to registration issues. We have marked this scans as 'unacceptable' scan quality in the XNAT database.
