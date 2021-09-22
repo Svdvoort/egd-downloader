@@ -4,7 +4,7 @@ Tool to download the data from the Erasmus Glioma Database
 
 ## Background
 
-This tool can be used to download the data from the Erasmus Glioma Database that is hosted on the [BMIA XNAT](https://xnat.bmia.nl/data/archive/projects/egd). This data is described in the accompanying publication (publication to be published later). Please cite this publication when using this data.
+This tool can be used to download the data from the Erasmus Glioma Database that is hosted on the [BMIA XNAT](https://xnat.bmia.nl/data/archive/projects/egd). This data is described in the accompanying publication: https://doi.org/10.1016/j.dib.2021.107191. Please cite this publication when using this data.
 
 The data is hosted on `XNAT`, and can be interacted with using the `XNAT` API or one of the python packages that can interact with `XNAT` such as [xnatpy](https://xnat.readthedocs.io/en/latest/) or [pyxnat](https://pyxnat.github.io/pyxnat/).
 
