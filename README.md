@@ -30,3 +30,7 @@ In this command three items have to be set by the user:
 # Notes
 
 Some scans might have a poor image quality or errors due to registration issues. We have marked this scans as 'unacceptable' scan quality in the XNAT database.
+
+# Funding
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 952103
